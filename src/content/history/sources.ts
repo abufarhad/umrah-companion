@@ -1,0 +1,31 @@
+import type { HistorySource } from '../types'
+
+/** Historical sources (checked 2026-10-17). Saudipedia is the Saudi government encyclopedia. */
+export const SRC = {
+  britannicaKaaba: { title: 'Britannica - Kaaba', url: 'https://www.britannica.com/topic/Kaaba-shrine-Mecca-Saudi-Arabia' },
+  ibnZubayr: { title: 'Sahih Muslim 1333f', url: 'https://sunnah.com/muslim:1333f' },
+  quraysh1582: { title: 'Sahih al-Bukhari 1582', url: 'https://sunnah.com/bukhari:1582' },
+  qdlFlood: { title: 'Qatar Digital Library', url: 'https://www.qdl.qa/archive/81055/vdc_100023727633.0x00003f' },
+  kaaba1996: { title: 'Saudipedia - Kaaba restoration', url: 'https://saudipedia.com/en/what-did-the-comprehensive-restoration-works-of-al-kaaba-al-musharrafa-include' },
+  britannicaHaram: { title: 'Britannica - Great Mosque of Mecca', url: 'https://www.britannica.com/topic/Great-Mosque-of-Mecca' },
+  arabNewsHaram: { title: 'Arab News - expansions of the Grand Mosque', url: 'https://www.arabnews.com/node/1711561' },
+  firstExpansion: { title: 'Saudipedia - first Saudi expansion', url: 'https://saudipedia.com/en/the-first-saudi-expansion-of-the-grand-mosque' },
+  secondExpansion: { title: 'Saudipedia - second Saudi expansion', url: 'https://saudipedia.com/en/the-second-saudi-expansion-of-the-grand-mosque' },
+  thirdExpansion: { title: 'Saudipedia - third Saudi expansion', url: 'https://saudipedia.com/en/article/401/religion/the-grand-mosque/the-third-saudi-expansion-of-the-grand-mosque' },
+  masa2008: { title: 'Arab News - Mas‘a expansion', url: 'https://www.arabnews.com/node/319427' },
+  mataf: { title: 'Saudipedia - Mataf capacity', url: 'https://saudipedia.com/en/what-is-the-capacity-of-mataf' },
+  zamzamProject: { title: 'Arab News - King Abdullah Zamzam project', url: 'https://www.arabnews.com/node/378961' },
+  zamzamDiscover: { title: 'Discover Makkah - Zamzam water project', url: 'https://discovermakkah.sa/en/places-worth-visiting/landmarks/king-abdullah-zamzam-water-project' },
+  zamzamSpa: { title: 'Saudi Press Agency - Zamzam well', url: 'https://www.spa.gov.sa/en/N2597991' },
+  zamzamTimeline: { title: 'Saudipedia - Zamzam well timeline', url: 'https://saudipedia.com/en/timeline-of-zamzam-well-development-during-the-saudi-reign' },
+  nabawiArabNews: { title: 'Arab News - history of the Prophet’s Mosque', url: 'https://www.arabnews.com/node/1356691' },
+  bukhari446: { title: 'Sahih al-Bukhari 446', url: 'https://sunnah.com/bukhari:446' },
+  britannicaMedina: { title: 'Britannica - Medina', url: 'https://www.britannica.com/place/Medina-Saudi-Arabia' },
+  britannicaNabawi: { title: 'Britannica - Prophet’s Mosque', url: 'https://www.britannica.com/topic/Prophets-Mosque' },
+  greenDome: { title: 'Wikipedia - Green Dome (secondary)', url: 'https://en.wikipedia.org/wiki/Green_Dome' },
+  nabawiTimeline: { title: 'Saudipedia - Saudi expansions of the Prophet’s Mosque', url: 'https://saudipedia.com/en/article/2375/religion/the-prophet-mosque/timeline-of-saudi-expansions-of-the-prophets-mosque' },
+  nabawiSecond: { title: 'Saudipedia - second Saudi expansion (Prophet’s Mosque)', url: 'https://saudipedia.com/en/article/435/religion/the-prophet-mosque/the-second-saudi-expansion-of-the-prophets-mosque' },
+  mawaqit: { title: 'Saudipedia - Mawaqit al-Ihram', url: 'https://saudipedia.com/en/article/1261/religion/hajj-and-umrah/mawaqit-al-ihram' },
+  dhulHulayfah: { title: 'Saudipedia - Dhul-Hulayfah', url: 'https://saudipedia.com/en/miqat-dhu-al-hulayfah' },
+  ministry: { title: 'Ministry of Hajj and Umrah', url: 'https://haj.gov.sa/Umrah' },
+} satisfies Record<string, HistorySource>

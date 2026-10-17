@@ -1,0 +1,125 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-emerald-950: #052e25;
+  --color-emerald-900: #073d31;
+  --color-emerald-800: #0b4f3f;
+  --color-emerald-700: #0f6650;
+  --color-emerald-600: #157d62;
+  --color-emerald-500: #1f9a78;
+  --color-emerald-100: #dcefe7;
+  --color-emerald-50: #eef7f3;
+
+  --color-sand-50: #fcfaf5;
+  --color-sand-100: #f7f1e6;
+  --color-sand-200: #efe4cf;
+  --color-sand-300: #e2d1b0;
+  --color-sand-500: #b99b6b;
+
+  --color-gold-300: #e3c77f;
+  --color-gold-400: #d4ad55;
+  --color-gold-500: #b98d32;
+  --color-gold-600: #956f22;
+
+  --color-ink: #1d2622;
+  --color-ink-soft: #4b5751;
+  --color-ink-muted: #6d7872;
+
+  --font-sans: 'Inter', 'Noto Sans Bengali', system-ui, sans-serif;
+  --font-display: 'Fraunces', 'Noto Serif Bengali', Georgia, serif;
+  --font-arabic: 'Amiri', 'Noto Naskh Arabic', 'Traditional Arabic', serif;
+
+  --shadow-card: 0 1px 2px rgb(7 61 49 / 0.05), 0 8px 24px -12px rgb(7 61 49 / 0.18);
+  --shadow-lift: 0 2px 4px rgb(7 61 49 / 0.06), 0 18px 40px -16px rgb(7 61 49 / 0.3);
+}
+
+:root {
+  --text-scale: 1;
+  color: var(--color-ink);
+  background: var(--color-sand-50);
+}
+
+html {
+  font-size: calc(100% * var(--text-scale));
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+html[data-motion='reduce'] *,
+html[data-motion='reduce'] *::before,
+html[data-motion='reduce'] *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-sand-50);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Bangla text reads better slightly larger and with more line height. */
+html[lang='bn'] body {
+  font-family: 'Noto Sans Bengali', 'Inter', system-ui, sans-serif;
+  line-height: 1.7;
+}
+html[lang='bn'] .font-display {
+  font-family: 'Noto Serif Bengali', 'Fraunces', serif;
+}
+
+.arabic {
+  font-family: var(--font-arabic);
+  direction: rtl;
+  unicode-bidi: isolate;
+  line-height: 2.1;
+  font-feature-settings: 'liga', 'calt';
+}
+
+/* Subtle eight-point star lattice used behind hero sections. */
+.geo-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%23d4ad55' stroke-opacity='0.22' stroke-width='1'%3E%3Cpath d='M28 4l7 17 17 7-17 7-7 17-7-17-17-7 17-7z'/%3E%3Crect x='16' y='16' width='24' height='24' transform='rotate(45 28 28)'/%3E%3C/g%3E%3C/svg%3E");
+}
+.geo-pattern-light {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%230b4f3f' stroke-opacity='0.07' stroke-width='1'%3E%3Cpath d='M28 4l7 17 17 7-17 7-7 17-7-17-17-7 17-7z'/%3E%3Crect x='16' y='16' width='24' height='24' transform='rotate(45 28 28)'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-gold-400);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  opacity: 0.6;
+}
+
+@media print {
+  header,
+  footer,
+  nav,
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+  }
+  .print-break {
+    break-before: page;
+  }
+  .shadow-card,
+  .shadow-lift {
+    box-shadow: none !important;
+  }
+  a[href^='http']::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.75em;
+    color: #555;
+  }
+}
