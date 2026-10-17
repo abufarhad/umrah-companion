@@ -4,6 +4,7 @@ import type { TourSite } from '../../content/types'
 import { useLang } from '../../i18n'
 import { num } from '../../lib/format'
 import { hasMapsKey, loadGoogleMaps, project } from '../../lib/maps'
+import { OsmMap } from './OsmMap'
 
 const W = 640
 const H = 420
@@ -153,5 +154,6 @@ export function TourMap(props: MapProps) {
   const map = (id?: string) => (id ? (props.sites.find((s) => s.id === id)?.within ?? id) : id)
   const route = props.route.map((id) => map(id)!).filter((id, i, a) => a.indexOf(id) === i)
   const p = { ...props, sites: pins, route, active: map(props.active) }
-  return hasMapsKey ? <GoogleMap {...p} /> : <SchematicMap {...p} />
+  // Google map only when a key is configured; otherwise the free OpenStreetMap map.
+  return hasMapsKey ? <GoogleMap {...p} /> : <OsmMap {...p} />
 }

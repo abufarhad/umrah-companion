@@ -711,6 +711,7 @@ export const en = {
     status: { verified: 'Visitor info verified', partial: 'Partly verified', unverified: 'Not verified - check locally' },
     mapLabel: 'Map of the places',
     schematicNote: 'Overview map drawn from each place’s coordinates (Wikidata). Not a street map; dashed lines show your visit order, not roads. Use Google Maps for directions.',
+    osmNote: "Free map: © OpenStreetMap contributors. The dashed line shows your visit order, not roads - use the Google Maps buttons for real directions.",
     googleNote: 'Map data © Google. Dashed lines show your visit order, not roads - open the route in Google Maps for real directions.',
     directions: 'Directions',
     openInMaps: 'Open in Google Maps',

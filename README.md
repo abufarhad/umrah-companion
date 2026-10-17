@@ -71,7 +71,7 @@ Please have a qualified scholar review `src/content/references.ts` and `src/cont
 - **Tour planner:** pick places, reorder them, start from editable example tours, and mark places visited.
   - The route opens in Google Maps with waypoints, so Google computes the real roads and travel times; the app never estimates them. Google Maps links take at most 9 waypoints.
   - "Suggested time on site" is a planning suggestion only.
-- **Maps:** without `VITE_GOOGLE_MAPS_API_KEY` the app draws its own overview map from the coordinates and uses Google Maps links for places and directions (no key, no cost). With a key it loads the Maps JavaScript API; see `.env.example` for setup and key restrictions.
+- **Maps:** by default the interactive map is free OpenStreetMap via Leaflet (no key, no account, no billing; tiles © OpenStreetMap contributors). Places and directions open in Google Maps through plain links, which are also free. Setting `VITE_GOOGLE_MAPS_API_KEY` is optional and swaps in the Google Maps JavaScript API instead; see `.env.example`.
 
 ## Audio
 
